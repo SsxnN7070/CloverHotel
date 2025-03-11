@@ -7,9 +7,11 @@ import '../controllers/booking_controller.dart';
 
 class BookingView extends GetView<BookingController> {
   const BookingView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
+
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,9 +47,8 @@ class BookingView extends GetView<BookingController> {
                 ),
               ),
               child: ListView.builder(
-                itemCount: 5,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+                itemCount: 6,
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
@@ -68,7 +69,7 @@ class BookingView extends GetView<BookingController> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Booking ID: #9f12940a21',
+                                'Booking ID: 1h439#sc${index + 2}', // Dynamic Booking ID
                                 style: KStyle.t14PTextStyle.copyWith(
                                   color: KStyle.cBlack,
                                   fontWeight: FontWeight.w700,
@@ -80,8 +81,7 @@ class BookingView extends GetView<BookingController> {
                                   Get.to(const BookingDetailView());
                                 },
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 12, vertical: 3.5),
+                                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 3.5),
                                   decoration: BoxDecoration(
                                     color: KStyle.cPrimary,
                                     borderRadius: BorderRadius.circular(10),
@@ -93,7 +93,7 @@ class BookingView extends GetView<BookingController> {
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
                             ],
                           ),
                           Column(
@@ -106,13 +106,13 @@ class BookingView extends GetView<BookingController> {
                               ),
                               const SizedBox(height: 10),
                               Text(
-                                'Date -1 Jan 24 ',
+                                'Date ${index + 1} Jan - ${(index + 1) + 3} Jan', // Dynamic Date Range
                                 style: KStyle.t14PTextStyle.copyWith(
                                   color: KStyle.cBlack,
                                 ),
-                              )
+                              ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -120,7 +120,7 @@ class BookingView extends GetView<BookingController> {
                 },
               ),
             ),
-          )
+          ),
         ],
       ),
     );

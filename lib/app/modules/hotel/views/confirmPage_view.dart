@@ -34,7 +34,7 @@ class ConfirmpageView extends GetView {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              elevation: 4,
+              elevation: 3,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -63,14 +63,14 @@ class ConfirmpageView extends GetView {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      '40,000 MMK (Weekdays / per night)',
+                      '3,000 Bath (Weekdays / per night)',
                       style: TextStyle(
                           color: KStyle.cPrimary,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
                     Text(
-                      '50,000 MMK (Weekend / per night)',
+                      '4,000 Bath (Weekend / per night)',
                       style: TextStyle(
                           color: KStyle.cPrimary,
                           fontWeight: FontWeight.bold,
@@ -84,7 +84,7 @@ class ConfirmpageView extends GetView {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      '130,000 MMK',
+                      '13,000 Bath',
                       style: TextStyle(
                         color: KStyle.cPrimary,
                         fontSize: 18,

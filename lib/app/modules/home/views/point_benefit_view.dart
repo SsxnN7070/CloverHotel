@@ -36,7 +36,7 @@ class PointBenefitView extends GetView {
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
               scrollDirection: Axis.vertical,
-              itemCount: 10,
+              itemCount: 6,
               itemBuilder: (BuildContext context, int index) {
                 return BenefitItem();
               },
@@ -78,6 +78,7 @@ class BenefitItem extends StatelessWidget {
             height: 104,
             width: 120,
             color: Colors.grey,
+            child: Image.asset('assets/images/benfit1.png', fit: BoxFit.cover),
           ),
           const SizedBox(width: 16),
           Expanded(

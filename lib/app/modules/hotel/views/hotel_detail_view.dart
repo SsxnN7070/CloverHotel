@@ -14,7 +14,7 @@ class HotelDetailView extends GetView {
       appBar: AppBar(
         backgroundColor: KStyle.cPrimary,
         title: Text(
-          'Clover Street Royal Lake',
+          'Cheow Lan Lake',
           style: KStyle.t18PTextStyle.copyWith(
             fontWeight: FontWeight.w700,
             color: KStyle.cWhite,
@@ -39,13 +39,14 @@ class HotelDetailView extends GetView {
             child: ListView.builder(
               padding: EdgeInsets.symmetric(horizontal: 24),
               scrollDirection: Axis.horizontal,
-              itemCount: 8,
+              itemCount: 5,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   margin: EdgeInsets.only(right: 10),
                   height: 177,
                   width: 278,
                   color: KStyle.cGrey,
+                  child: Image.asset('assets/images/hotel_image1.png', fit: BoxFit.cover),
                 );
               },
             ),
@@ -61,7 +62,7 @@ class HotelDetailView extends GetView {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        '10 Ngar Htat Gyi Pagoda St, Yangon',
+                        'Khlong Lat Mayom Floating Market, Taling Chan',
                         style: KStyle.t12PTextStyle,
                       ),
                     )
@@ -75,7 +76,7 @@ class HotelDetailView extends GetView {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        '09928391841, 098848285',
+                        '063-416-2567, 089-851-1263',
                         style: KStyle.t12PTextStyle,
                       ),
                     )
@@ -104,7 +105,7 @@ class HotelDetailView extends GetView {
                 ListView.builder(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-                  itemCount: 8,
+                  itemCount: 4,
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, int index) {
@@ -123,16 +124,24 @@ class HotelDetailView extends GetView {
                           child: Row(
                             children: [
                               Container(
-                                height: 120,
-                                width: 140,
+                                height: 135,
+                                width: 135,
                                 decoration: BoxDecoration(
-                                  color: KStyle.cGrey,
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    'assets/images/hotel2.png', // Make sure to add the correct file extension
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Text(
-                                  'Deluxe Room\nRoom size: 344 ft\nShwedagon Pagoda view\n2 single beds ',
+                                  'Deluxe Room\nRoom size: 344 ft\nLake view\n2 single beds ',
                                   style: KStyle.t14PTextStyle,
                                 ),
                               )

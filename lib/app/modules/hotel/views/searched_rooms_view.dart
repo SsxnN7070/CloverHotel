@@ -78,7 +78,15 @@ class SearchedRoomsView extends GetView {
                               height: 120,
                               width: 140,
                               decoration: BoxDecoration(
-                                color: KStyle.cGrey,
+                                color: Colors.grey,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(10),
+                                child: Image.asset(
+                                  'assets/images/hotel1.png', // Make sure to add the correct file extension
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                             const SizedBox(width: 12),

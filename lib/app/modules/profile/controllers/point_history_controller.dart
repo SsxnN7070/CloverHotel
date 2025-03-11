@@ -7,7 +7,7 @@ class PointHistoryController extends GetxController
 
   @override
   void onInit() {
-    tabController = TabController(length: 3, vsync: this).obs;
+    tabController = TabController(length: 5, vsync: this).obs;
     super.onInit();
   }
 

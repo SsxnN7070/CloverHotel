@@ -117,7 +117,7 @@ class HomeView extends GetView<HomeController> {
                               ),
                             ),
                             Text(
-                              '1,000',
+                              '980',
                               style: KStyle.t40IBMTextStyle,
                             ),
                           ],

@@ -104,13 +104,20 @@ class HotelView extends GetView<HotelController> {
                                   color: Colors.grey,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.asset(
+                                    'assets/images/hotel3.png', // Make sure to add the correct file extension
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
                               ),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Column(
                                   children: [
                                     Text(
-                                      'Clover Street Royal lake ',
+                                      'Cheow Lan Lake',
                                       style: KStyle.t14PTextStyle.copyWith(
                                         fontWeight: FontWeight.w700,
                                       ),
@@ -125,7 +132,7 @@ class HotelView extends GetView<HotelController> {
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
-                                            '10 Ngar Htat Gyi Pagoda St, Yangon',
+                                            'Khlong Lat Mayom Floating Market, Taling Chan',
                                             style: KStyle.t12PTextStyle,
                                           ),
                                         )
@@ -141,7 +148,7 @@ class HotelView extends GetView<HotelController> {
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
-                                            '09928391841, 098848285',
+                                            '063-416-2567, 089-851-1263',
                                             style: KStyle.t12PTextStyle,
                                           ),
                                         )

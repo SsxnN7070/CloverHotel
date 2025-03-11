@@ -44,13 +44,14 @@ class RoomDetailView extends GetView {
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               scrollDirection: Axis.horizontal,
-              itemCount: 8,
+              itemCount: 5,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   margin: const EdgeInsets.only(right: 10),
                   height: 177,
                   width: 365,
                   color: KStyle.cGrey,
+                  child: Image.asset('assets/images/hotel_image1.png', fit: BoxFit.cover),
                 );
               },
             ),
@@ -87,7 +88,7 @@ class RoomDetailView extends GetView {
                     ),
                     const SizedBox(width: 19),
                     Text(
-                      '50,000 MMK',
+                      '4,000 Bath',
                       style: KStyle.t18PTextStyle.copyWith(
                         fontWeight: FontWeight.w700,
                         color: KStyle.cPrimary,
@@ -111,7 +112,7 @@ class RoomDetailView extends GetView {
                     ),
                     const SizedBox(width: 19),
                     Text(
-                      '40,000 MMK',
+                      '3,000 Bath',
                       style: KStyle.t18PTextStyle.copyWith(
                         fontWeight: FontWeight.w700,
                         color: KStyle.cAccent,

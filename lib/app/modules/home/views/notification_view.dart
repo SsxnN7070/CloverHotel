@@ -32,7 +32,7 @@ class NotificationView extends GetView {
       ),
       body: ListView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 24),
-        itemCount: 5,
+        itemCount: 2,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),

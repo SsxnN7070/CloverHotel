@@ -2,11 +2,13 @@ import 'package:clover_hotel_clone/app/modules/login/views/forgot_password_view.
 import 'package:clover_hotel_clone/app/modules/login/views/register_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../home/views/home_view.dart';
 
 import '../../../../constants/color_style.dart';
 
 class LoginView extends GetView {
   const LoginView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,7 +80,7 @@ class LoginView extends GetView {
                           ),
                           const SizedBox(height: 8),
                           LoginTextField(
-                            hintText: 'password',
+                            hintText: 'Password',
                             obscureText: true,
                             onChanged: (String value) {},
                           ),
@@ -92,19 +94,20 @@ class LoginView extends GetView {
                               style: KStyle.t14BTextStyle,
                             ),
                           ),
-                          SizedBox(
-                            height: 16,
-                          ),
+                          const SizedBox(height: 16),
                           Align(
                             alignment: Alignment.center,
                             child: SizedBox(
                               width: MediaQuery.of(context).size.width,
                               height: 44,
                               child: TextButton(
-                                style: TextButton.styleFrom(
-                                  backgroundColor: KStyle.cAccent,
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                      KStyle.cAccent),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Get.to(() => HomeView());
+                                },
                                 child: Text(
                                   'Login',
                                   style: KStyle.t16PTextStyle.copyWith(
@@ -115,9 +118,7 @@ class LoginView extends GetView {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 16,
-                          ),
+                          const SizedBox(height: 16),
                           GestureDetector(
                             onTap: () {
                               Get.to(() => const RegisterView());
@@ -128,9 +129,10 @@ class LoginView extends GetView {
                                   "Don't have an account? ",
                                   style: KStyle.t14BTextStyle,
                                 ),
-                                Text("Register",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                const Text(
+                                  "Register",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
                               ],
                             ),
                           ),

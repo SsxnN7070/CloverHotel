@@ -1,6 +1,6 @@
 import 'package:clover_hotel_clone/app/modules/chat/views/askInfo_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/color_style.dart';
@@ -10,9 +10,10 @@ import '../controllers/chat_controller.dart';
 
 class ChatView extends GetView<ChatController> {
   const ChatView({super.key});
+
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.sizeOf(context);
+    final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,7 +93,7 @@ class ChatView extends GetView<ChatController> {
                   Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
-                      itemCount: 2,
+                      itemCount: 2, // You can replace with dynamic count
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           width: size.width,
@@ -105,17 +106,22 @@ class ChatView extends GetView<ChatController> {
                           ),
                           child: Row(
                             children: [
+                              // Image Section
                               Container(
                                 height: 135,
                                 width: 135,
                                 decoration: BoxDecoration(
-                                  color: Colors.grey,
                                   borderRadius: BorderRadius.circular(10),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/images/hotel_image1.png'), // Correct image path
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       'Clover Street Royal lake ',
@@ -133,7 +139,7 @@ class ChatView extends GetView<ChatController> {
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
-                                            '10 Ngar Htat Gyi Pagoda St, Yangon',
+                                            'Khao Sok Lake, Kuraburi',
                                             style: KStyle.t12PTextStyle,
                                           ),
                                         )
@@ -149,7 +155,7 @@ class ChatView extends GetView<ChatController> {
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
-                                            '09928391841, 098848285',
+                                            '0634162567, 0898511263',
                                             style: KStyle.t12PTextStyle,
                                           ),
                                         )

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../home/views/home_view.dart';
 
 import '../../../../constants/color_style.dart';
 
 class ReservationSuccessView extends GetView {
   const ReservationSuccessView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +55,14 @@ class ReservationSuccessView extends GetView {
             width: 170,
             height: 47,
             child: TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: KStyle.cPrimary,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
               onPressed: () {
-                Get.back();
+                Get.offAll(() => const HomeView()); // Navigate to HomeView
               },
               child: Text(
                 'Go Back',

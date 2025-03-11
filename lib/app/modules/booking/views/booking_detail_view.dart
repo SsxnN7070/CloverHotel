@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../../constants/color_style.dart';
@@ -7,6 +7,7 @@ import '../../../../widgets/button_splash.dart';
 
 class BookingDetailView extends GetView {
   const BookingDetailView({super.key});
+  
   @override
   Widget build(BuildContext context) {
     TextStyle titleTextStyle = KStyle.t16PTextStyle.copyWith(
@@ -52,17 +53,21 @@ class BookingDetailView extends GetView {
                   ),
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text('Completed', style: KStyle.t14PTextStyle),
+                    Text(
+                      'Completed',
+                      style: KStyle.t14PTextStyle,
+                    ),
                     const SizedBox(height: 8),
                     Text(
-                      'Date -1 Jan 24 ',
+                      'Date 1 Jan - 24 Jan',
                       style: KStyle.t14PTextStyle.copyWith(
                         color: KStyle.cBlack,
                       ),
                     )
                   ],
-                )
+                ),
               ],
             ),
           ),
@@ -88,16 +93,18 @@ class BookingDetailView extends GetView {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         const DetailRowWidget(
-                            title1: 'Hotel',
-                            content1: 'Golden Velly',
-                            title2: 'Room Type',
-                            content2: 'Deluxe'),
+                          title1: 'Hotel',
+                          content1: 'Golden Velly',
+                          title2: 'Room Type',
+                          content2: 'Deluxe',
+                        ),
                         const SizedBox(height: 30),
                         const DetailRowWidget(
-                            title1: 'Date',
-                            content1: '1 June 2024 - 3 June 2024',
-                            title2: 'Duration',
-                            content2: '3 days'),
+                          title1: 'Date',
+                          content1: '1 June 2024 - 3 June 2024',
+                          title2: 'Duration',
+                          content2: '3 days',
+                        ),
                         const SizedBox(height: 30),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,12 +115,12 @@ class BookingDetailView extends GetView {
                             ),
                             const SizedBox(height: 10),
                             const WeekDayTextRow(
-                              text1: '40,000 MMK ',
+                              text1: '3,000 Bath ',
                               text2: '(Weekdays / per night)',
                             ),
                             const SizedBox(height: 8),
                             const WeekDayTextRow(
-                              text1: '50,000 MMK ',
+                              text1: '4,000 Bath ',
                               text2: '(Weekend / per night)',
                             ),
                           ],
@@ -145,6 +152,12 @@ class BookingDetailView extends GetView {
                       onPressed: () {
                         _showCategoryFilterBottomSheet(context);
                       },
+                      style: TextButton.styleFrom(
+                        backgroundColor: KStyle.cPrimary,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
                       child: Text(
                         'View Receipt',
                         style: KStyle.t14PTextStyle.copyWith(
@@ -170,8 +183,7 @@ class BookingDetailView extends GetView {
       ),
       builder: (context) {
         return Container(
-          padding: const EdgeInsets.all(
-              16), // Reduced padding for a more compact design
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -196,7 +208,12 @@ class BookingDetailView extends GetView {
               ),
               const SizedBox(height: 16),
               Text(
-                'Select Categorydf ajfaisoddddddddddddddddddddddddddddddddddddddafffffffffffffffffffffffffffffffffffffffk kkkkkkkkkkkkkkkkkkkkkk  kakdkfkw eajoijoia jdfio jwaio fjioaw efiadif aisdjvijasidjv asdnfis oifjiejiofj osmdo aiodjfioawj ioj efiojasdiop jfioajd ifjasoidjf iaj icoj ovnuaguiagojioe fwefio jasdijfioasjdfviojasoijdfiojwej iowv osmdio djfiawd fiajidjf aindifjaifdjisajijfioj dsicjasdiojijoixjiviwhehioweifjsoij',
+                'Select Category\n(Extra description can go here)',
+                textAlign: TextAlign.center,
+                style: KStyle.t14PTextStyle.copyWith(
+                  color: KStyle.cBlack,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
               const SizedBox(height: 16),
               SizedBox(
@@ -204,8 +221,14 @@ class BookingDetailView extends GetView {
                 width: 160,
                 child: TextButton(
                   onPressed: () {
-                    Get.to('');
+                    Get.to(''); // Link to the appropriate page
                   },
+                  style: TextButton.styleFrom(
+                    backgroundColor: KStyle.cPrimary,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -216,8 +239,7 @@ class BookingDetailView extends GetView {
                       const SizedBox(width: 12),
                       Text(
                         'Download Pdf',
-                        style:
-                            KStyle.t13PTextStyle.copyWith(color: KStyle.cWhite),
+                        style: KStyle.t13PTextStyle.copyWith(color: KStyle.cWhite),
                       ),
                     ],
                   ),
@@ -305,21 +327,22 @@ class DetailRowWidget extends StatelessWidget {
           ),
         ),
         SizedBox(
-            width: 100,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title2,
-                  style: titleTextStyle,
-                ),
-                const SizedBox(height: 10),
-                Text(
-                  content2,
-                  style: contentTextStyle,
-                )
-              ],
-            ))
+          width: 100,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title2,
+                style: titleTextStyle,
+              ),
+              const SizedBox(height: 10),
+              Text(
+                content2,
+                style: contentTextStyle,
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
