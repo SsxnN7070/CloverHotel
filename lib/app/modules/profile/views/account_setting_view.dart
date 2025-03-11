@@ -8,6 +8,7 @@ import '../../../../widgets/button_splash.dart';
 
 class AccountSettingView extends GetView<ProfileController> {
   const AccountSettingView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +25,8 @@ class AccountSettingView extends GetView<ProfileController> {
         centerTitle: true,
         leading: SplashButton(
           iconSize: 12,
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: SvgPicture.asset(
-            'assets/icons/circle_back.svg',
-          ),
+          onTap: () => Navigator.pop(context),
+          child: SvgPicture.asset('assets/icons/circle_back.svg'),
         ),
       ),
       body: SingleChildScrollView(
@@ -39,9 +36,15 @@ class AccountSettingView extends GetView<ProfileController> {
             Container(
               height: 160,
               width: 160,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                color: KStyle.cGrey,
+                color: Colors.grey,
+              ),
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/images/profile.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -49,18 +52,16 @@ class AccountSettingView extends GetView<ProfileController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'User ID:  ',
-                  style: KStyle.t16PTextStyle.copyWith(
-                    color: KStyle.cBlack,
-                  ),
+                  'User ID: ',
+                  style: KStyle.t16PTextStyle.copyWith(color: KStyle.cBlack),
                 ),
                 Text(
-                  'CSRL10166',
+                  'sxnn10166',
                   style: KStyle.t18PTextStyle.copyWith(
                     color: KStyle.cBlack,
                     fontWeight: FontWeight.w700,
                   ),
-                )
+                ),
               ],
             ),
             const SizedBox(height: 15),
@@ -69,93 +70,17 @@ class AccountSettingView extends GetView<ProfileController> {
               child: Form(
                 child: Column(
                   children: [
-                    AccountSettingTextField(
-                      hintText: 'username',
-                      labelText: 'User Name',
-                      onChanged: (value) {},
-                    ),
+                    AccountSettingTextField(hintText: 'Username', labelText: 'User Name'),
                     const SizedBox(height: 15),
-                    AccountSettingTextField(
-                      hintText: 'Email',
-                      labelText: 'Email',
-                      onChanged: (value) {},
-                    ),
+                    AccountSettingTextField(hintText: 'Email', labelText: 'Email'),
                     const SizedBox(height: 15),
-                    AccountSettingTextField(
-                      hintText: 'phone number',
-                      labelText: 'Phone Number',
-                      onChanged: (value) {},
-                    ),
+                    AccountSettingTextField(hintText: 'Phone Number', labelText: 'Phone Number'),
                     const SizedBox(height: 15),
-                    AccountSettingTextField(
-                      hintText: 'date of birth',
-                      labelText: 'Date of Birth',
-                      onChanged: (value) {},
-                    ),
+                    AccountSettingTextField(hintText: 'Date of Birth', labelText: 'Date of Birth'),
                     const SizedBox(height: 15),
-                    PhysicalModel(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      elevation: 3.0,
-                      shadowColor: KStyle.cF6Grey,
-                      child: TextFormField(
-                        onChanged: (value) {},
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: "Password",
-                          hintStyle: KStyle.t14PTextStyle.copyWith(
-                            color: KStyle.cGrey,
-                          ),
-                          suffixIcon: IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.visibility_off)),
-                          labelText: "Password",
-                          labelStyle: KStyle.t16PTextStyle,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                          filled: true,
-                          fillColor: KStyle.cWhite,
-                        ),
-                      ),
-                    ),
+                    AccountSettingTextField(hintText: 'Password', labelText: 'Password', obscureText: true),
                     const SizedBox(height: 15),
-                    PhysicalModel(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      elevation: 3.0,
-                      shadowColor: KStyle.cF6Grey,
-                      child: TextFormField(
-                        onChanged: (value) {},
-                        obscureText: true,
-                        decoration: InputDecoration(
-                          hintText: "Confirm Password",
-                          hintStyle: KStyle.t14PTextStyle.copyWith(
-                            color: KStyle.cGrey,
-                          ),
-                          suffixIcon: IconButton(
-                              onPressed: () {},
-                              icon: Icon(Icons.visibility_off)),
-                          labelText: "Confirm Password",
-                          labelStyle: KStyle.t16PTextStyle,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            borderSide: BorderSide.none,
-                          ),
-                          filled: true,
-                          fillColor: KStyle.cWhite,
-                        ),
-                      ),
-                    ),
+                    AccountSettingTextField(hintText: 'Confirm Password', labelText: 'Confirm Password', obscureText: true),
                     const SizedBox(height: 30),
                     Align(
                       alignment: Alignment.centerRight,
@@ -163,19 +88,16 @@ class AccountSettingView extends GetView<ProfileController> {
                         height: 44,
                         width: 150,
                         child: TextButton(
+                          style: TextButton.styleFrom(backgroundColor: KStyle.cPrimary),
                           onPressed: () {},
                           child: Text(
                             'Update',
-                            style: KStyle.t16PTextStyle.copyWith(
-                              color: KStyle.cWhite,
-                            ),
+                            style: KStyle.t16PTextStyle.copyWith(color: KStyle.cWhite),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 12,
-                    ),
+                    const SizedBox(height: 12),
                   ],
                 ),
               ),
@@ -191,15 +113,13 @@ class AccountSettingTextField extends StatelessWidget {
   const AccountSettingTextField({
     super.key,
     required this.hintText,
-    required this.onChanged,
+    required this.labelText,
     this.obscureText = false,
-    this.labelText,
   });
 
   final String hintText;
-  final Function(String) onChanged;
+  final String labelText;
   final bool obscureText;
-  final String? labelText;
 
   @override
   Widget build(BuildContext context) {
@@ -209,13 +129,10 @@ class AccountSettingTextField extends StatelessWidget {
       elevation: 3.0,
       shadowColor: KStyle.cF6Grey,
       child: TextFormField(
-        onChanged: onChanged,
         obscureText: obscureText,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: KStyle.t14PTextStyle.copyWith(
-            color: KStyle.cGrey,
-          ),
+          hintStyle: KStyle.t14PTextStyle.copyWith(color: KStyle.cGrey),
           labelText: labelText,
           labelStyle: KStyle.t16PTextStyle,
           enabledBorder: OutlineInputBorder(
@@ -228,6 +145,12 @@ class AccountSettingTextField extends StatelessWidget {
           ),
           filled: true,
           fillColor: KStyle.cWhite,
+          suffixIcon: obscureText
+              ? IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.visibility_off),
+                )
+              : null,
         ),
       ),
     );

@@ -31,7 +31,7 @@ class TransactionDetailsView extends GetView {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text(
-                  'ID: 878123818a878f8711b',
+                  'ID: 54848745a878f8711b',
                   style: TextStyle(fontSize: 14, color: Colors.black),
                 ),
                 const Text(
@@ -54,7 +54,7 @@ class TransactionDetailsView extends GetView {
                   ),
                 ),
                 const Text(
-                  'Date: 31-1-2024',
+                  'Date: 6-9-2024',
                   style: TextStyle(fontSize: 14, color: Colors.grey),
                 ),
               ],
@@ -81,7 +81,7 @@ class TransactionDetailsView extends GetView {
                     SizedBox(height: 8),
                     Center(
                       child: Text(
-                        '- 50,000 MMK',
+                        '- 5,700 Bath',
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.red,
@@ -92,7 +92,7 @@ class TransactionDetailsView extends GetView {
                     SizedBox(height: 16),
                     _TransactionDetailRow(
                       title: 'Transaction Date',
-                      value: 'Date: 31-1-2024',
+                      value: 'Date: 6-9-2024',
                     ),
                     _TransactionDetailRow(
                       title: 'Transaction Time',
@@ -104,7 +104,7 @@ class TransactionDetailsView extends GetView {
                     ),
                     _TransactionDetailRow(
                       title: 'Amount',
-                      value: '-50,000 MMK',
+                      value: '-5,700 Bath',
                     ),
                   ],
                 ),
@@ -130,7 +130,7 @@ class TransactionDetailsView extends GetView {
                     ),
                     const _TransactionDetailRow(
                       title: 'Amount',
-                      value: '-45,000 MMK',
+                      value: '-4,000 Bath',
                     ),
                     const _TransactionDetailRow(
                       title: 'Type',
@@ -138,7 +138,7 @@ class TransactionDetailsView extends GetView {
                     ),
                     const _TransactionDetailRow(
                       title: 'Tax',
-                      value: '5000 MMK',
+                      value: '- 50 Bath',
                     ),
                     const Divider(),
                     Row(
@@ -152,7 +152,7 @@ class TransactionDetailsView extends GetView {
                           ),
                         ),
                         Text(
-                          '- 50,000 MMK',
+                          '- 9,750 Bath',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,

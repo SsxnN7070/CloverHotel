@@ -56,7 +56,7 @@ class SearchedRoomsView extends GetView {
               ListView.builder(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                itemCount: 8,
+                itemCount: 4,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {

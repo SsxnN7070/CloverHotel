@@ -223,7 +223,7 @@ class RoomDetailView extends GetView {
                   ),
                 ),
                 Text(
-                  'Helodfoaejfoasdvn al djafiojaowienvoaevoniiiiiiiiiiiiiiiiieeiiiiiiiii jdkmvvvvvvvvvvvvvvvvvvvv',
+                  'this is the best room out of this world',
                   style: KStyle.t16PTextStyle.copyWith(
                     fontWeight: FontWeight.w200,
                     color: KStyle.cGrey,

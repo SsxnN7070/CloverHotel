@@ -17,7 +17,7 @@ class TransactionHistoryView extends GetView {
           ),
         ),
         body: ListView.separated(
-          itemCount: 3,
+          itemCount: 1,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           separatorBuilder: (context, index) =>
               const Divider(height: 1, thickness: 1, color: Colors.grey),
@@ -53,17 +53,17 @@ class OrderHistoryTile extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.symmetric(vertical: 10),
       title: Text(
-        'ID: 2873979',
+        'ID: 1579468',
         style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
       ),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 5),
-          Text(" + 329000Ks",
+          Text("",
               style: const TextStyle(fontSize: 14, color: Colors.red)),
           const SizedBox(height: 5),
-          Text('Date: 7/11/2002',
+          Text('Date: 3/5/2004',
               style: const TextStyle(fontSize: 14, color: Colors.grey)),
         ],
       ),
@@ -78,7 +78,7 @@ class OrderHistoryTile extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: _getStatusColor('Pending')),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 15),
           const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.grey),
         ],
       ),

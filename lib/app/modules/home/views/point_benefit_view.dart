@@ -36,7 +36,7 @@ class PointBenefitView extends GetView {
             child: ListView.builder(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
               scrollDirection: Axis.vertical,
-              itemCount: 6,
+              itemCount: 1,
               itemBuilder: (BuildContext context, int index) {
                 return BenefitItem();
               },

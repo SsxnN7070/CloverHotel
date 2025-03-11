@@ -47,7 +47,7 @@ class ProfileView extends GetView<ProfileController> {
                               ),
                             ),
                             1: Text(
-                              'MYN',
+                              'TH',
                               style: KStyle.t14PTextStyle.copyWith(
                                 color: controller.slideTab.value == 1
                                     ? KStyle.cBlack
@@ -90,14 +90,20 @@ class ProfileView extends GetView<ProfileController> {
                       ],
                     ),
                   ),
-                  Container(
-                    height: 160,
-                    width: 160,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: KStyle.cGrey,
+                    Container(
+                      height: 160,
+                      width: 160,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: KStyle.cGrey,
+                      ),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/profile.jpg',
+                          fit: BoxFit.cover,
+                        ),
+                      ),
                     ),
-                  ),
                   const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

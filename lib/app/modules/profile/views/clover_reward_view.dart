@@ -39,7 +39,7 @@ class CloverRewardView extends GetView {
               height: 260, // Constrain the height of the horizontal ListVieww
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 3,
+                itemCount: 1,
                 itemBuilder: (context, index) {
                   return TeirCard(
                     tierImage: 'assets/images/tier/silver.png',

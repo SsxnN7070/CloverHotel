@@ -47,7 +47,6 @@ class BookingView extends GetView<BookingController> {
                 ),
               ),
               child: ListView.builder(
-                itemCount: 6,
                 padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(

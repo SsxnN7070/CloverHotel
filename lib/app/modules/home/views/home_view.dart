@@ -219,7 +219,7 @@ class HomeView extends GetView<HomeController> {
                                   scrollDirection: Axis.horizontal,
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 24),
-                                  itemCount: 5,
+                                  itemCount: 1,
                                   itemBuilder:
                                       (BuildContext context, int index) {
                                     return Container(
@@ -301,7 +301,7 @@ class HomeView extends GetView<HomeController> {
                       ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
-                        itemCount: 5,
+                        itemCount: 1,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 24, vertical: 10),
                         itemBuilder: (BuildContext context, int index) {

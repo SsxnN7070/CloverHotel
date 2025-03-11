@@ -77,7 +77,7 @@ class HotelView extends GetView<HotelController> {
                   ),
                   const SizedBox(height: 20),
                   ListView.builder(
-                    itemCount: 5,
+                    itemCount: 1,
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     padding: const EdgeInsets.symmetric(horizontal: 24),

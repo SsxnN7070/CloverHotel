@@ -55,7 +55,7 @@ class DepositView extends GetView {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          '0 MMK',
+                          '99,999 ฿',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 24,

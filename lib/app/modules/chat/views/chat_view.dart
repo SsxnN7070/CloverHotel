@@ -93,7 +93,7 @@ class ChatView extends GetView<ChatController> {
                   Expanded(
                     child: ListView.builder(
                       padding: const EdgeInsets.symmetric(horizontal: 24),
-                      itemCount: 2, // You can replace with dynamic count
+                      itemCount: 1, // You can replace with dynamic count
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
                           width: size.width,

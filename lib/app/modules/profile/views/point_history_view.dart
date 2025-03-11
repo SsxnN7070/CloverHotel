@@ -74,7 +74,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                   controller: controller.tabController.value,
                   children: [
                     ListView.builder(
-                      itemCount: 5,
+                      itemCount: 1,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 24, vertical: 20),
                       itemBuilder: (BuildContext context, int index) {
@@ -151,7 +151,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                       },
                     ),
                     ListView.builder(
-                      itemCount: 5,
+                      itemCount: 1,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 24, vertical: 20),
                       itemBuilder: (BuildContext context, int index) {
@@ -195,7 +195,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                                   ),
                                   const SizedBox(height: 12),
                                   Text(
-                                    'Discount 5,000 MMK',
+                                    'Discount 500 Baht',
                                     style: KStyle.t14PTextStyle.copyWith(
                                       color: KStyle.cBlack,
                                     ),
@@ -207,7 +207,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Date -1 Jan 24 ',
+                                    'Date 1 Jan - Jan 24 ',
                                     style: KStyle.t14PTextStyle.copyWith(
                                       color: KStyle.cBlack,
                                     ),
@@ -228,7 +228,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                       },
                     ),
                     ListView.builder(
-                      itemCount: 5,
+                      itemCount: 1,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 24, vertical: 20),
                       itemBuilder: (BuildContext context, int index) {
@@ -272,7 +272,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                                   ),
                                   const SizedBox(height: 12),
                                   Text(
-                                    'Discount 5,000 MMK',
+                                    'Discount 500 Baht',
                                     style: KStyle.t14PTextStyle.copyWith(
                                       color: KStyle.cBlack,
                                     ),
@@ -284,7 +284,7 @@ class PointHistoryView extends GetView<PointHistoryController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Date -1 Jan 24 ',
+                                    'Date 1 Jan - Jan 24',
                                     style: KStyle.t14PTextStyle.copyWith(
                                       color: KStyle.cBlack,
                                     ),
